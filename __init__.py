@@ -1,0 +1,3 @@
+"""
+EduGenie application package.
+"""
