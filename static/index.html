@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EduGenie - AI Learning Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/styles.css"
+    >
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            <span>EduGenie</span>
+        </div>
+
+        <div class="status">
+            <span
+                id="statusDot"
+                class="status-dot"
+            ></span>
+
+            <span id="statusText">
+                Checking AI...
+            </span>
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+
+            <div class="badge">
+                ✨ AI-Powered Learning
+            </div>
+
+            <h1>
+                Learn smarter with
+                <span>EduGenie</span>
+            </h1>
+
+            <p>
+                Your personal AI learning assistant for
+                explanations, summaries, quizzes and
+                personalized learning paths.
+            </p>
+
+        </section>
+
+
+        <section class="app-card">
+
+            <nav class="tabs">
+
+                <button
+                    class="tab active"
+                    data-tab="ask"
+                >
+                    💡 Ask
+                </button>
+
+                <button
+                    class="tab"
+                    data-tab="summarize"
+                >
+                    📝 Summarize
+                </button>
+
+                <button
+                    class="tab"
+                    data-tab="quiz"
+                >
+                    🧠 Quiz
+                </button>
+
+                <button
+                    class="tab"
+                    data-tab="learning"
+                >
+                    🚀 Learning Path
+                </button>
+
+            </nav>
+
+
+            <!-- ASK -->
+
+            <section
+                id="ask"
+                class="tab-content active"
+            >
+
+                <div class="section-heading">
+
+                    <h2>Ask EduGenie</h2>
+
+                    <p>
+                        Ask any educational question
+                        and get a clear explanation.
+                    </p>
+
+                </div>
+
+                <label for="question">
+                    Your question
+                </label>
+
+                <textarea
+                    id="question"
+                    placeholder="Example: Explain inheritance in Python with a simple example."
+                ></textarea>
+
+
+                <div class="form-row">
+
+                    <div class="field">
+
+                        <label for="askLevel">
+                            Learning level
+                        </label>
+
+                        <select id="askLevel">
+
+                            <option value="school">
+                                School
+                            </option>
+
+                            <option
+                                value="college"
+                                selected
+                            >
+                                College
+                            </option>
+
+                            <option value="beginner">
+                                Beginner
+                            </option>
+
+                            <option value="intermediate">
+                                Intermediate
+                            </option>
+
+                            <option value="advanced">
+                                Advanced
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    id="askButton"
+                >
+                    <span>Ask EduGenie</span>
+                    <span>→</span>
+                </button>
+
+            </section>
+
+
+            <!-- SUMMARIZE -->
+
+            <section
+                id="summarize"
+                class="tab-content"
+            >
+
+                <div class="section-heading">
+
+                    <h2>Summarize Text</h2>
+
+                    <p>
+                        Turn long study material into
+                        simple key points.
+                    </p>
+
+                </div>
+
+                <label for="summaryText">
+                    Text to summarize
+                </label>
+
+                <textarea
+                    id="summaryText"
+                    placeholder="Paste your notes, textbook content, article or study material here..."
+                ></textarea>
+
+
+                <button
+                    class="primary-button"
+                    id="summarizeButton"
+                >
+                    <span>Generate Summary</span>
+                    <span>→</span>
+                </button>
+
+            </section>
+
+
+            <!-- QUIZ -->
+
+            <section
+                id="quiz"
+                class="tab-content"
+            >
+
+                <div class="section-heading">
+
+                    <h2>Create a Quiz</h2>
+
+                    <p>
+                        Generate an AI-powered quiz
+                        for practice.
+                    </p>
+
+                </div>
+
+
+                <label for="quizTopic">
+                    Topic
+                </label>
+
+                <input
+                    type="text"
+                    id="quizTopic"
+                    placeholder="Example: Python Functions"
+                >
+
+
+                <div class="form-row">
+
+                    <div class="field">
+
+                        <label for="quizCount">
+                            Number of questions
+                        </label>
+
+                        <select id="quizCount">
+
+                            <option value="3">
+                                3
+                            </option>
+
+                            <option
+                                value="5"
+                                selected
+                            >
+                                5
+                            </option>
+
+                            <option value="7">
+                                7
+                            </option>
+
+                            <option value="10">
+                                10
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="quizDifficulty">
+                            Difficulty
+                        </label>
+
+                        <select id="quizDifficulty">
+
+                            <option value="easy">
+                                Easy
+                            </option>
+
+                            <option
+                                value="medium"
+                                selected
+                            >
+                                Medium
+                            </option>
+
+                            <option value="hard">
+                                Hard
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="quizLevel">
+                            Level
+                        </label>
+
+                        <select id="quizLevel">
+
+                            <option value="school">
+                                School
+                            </option>
+
+                            <option
+                                value="college"
+                                selected
+                            >
+                                College
+                            </option>
+
+                            <option value="beginner">
+                                Beginner
+                            </option>
+
+                            <option value="intermediate">
+                                Intermediate
+                            </option>
+
+                            <option value="advanced">
+                                Advanced
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    id="quizButton"
+                >
+                    <span>Generate Quiz</span>
+                    <span>→</span>
+                </button>
+
+            </section>
+
+
+            <!-- LEARNING PATH -->
+
+            <section
+                id="learning"
+                class="tab-content"
+            >
+
+                <div class="section-heading">
+
+                    <h2>Personalized Learning Path</h2>
+
+                    <p>
+                        Build a step-by-step plan
+                        for achieving your learning goal.
+                    </p>
+
+                </div>
+
+
+                <label for="learningGoal">
+                    What do you want to learn?
+                </label>
+
+                <textarea
+                    id="learningGoal"
+                    placeholder="Example: I want to learn Python programming and build projects."
+                ></textarea>
+
+
+                <div class="form-row">
+
+                    <div class="field">
+
+                        <label for="learningLevel">
+                            Current level
+                        </label>
+
+                        <select id="learningLevel">
+
+                            <option
+                                value="beginner"
+                                selected
+                            >
+                                Beginner
+                            </option>
+
+                            <option value="intermediate">
+                                Intermediate
+                            </option>
+
+                            <option value="advanced">
+                                Advanced
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="learningWeeks">
+                            Duration
+                        </label>
+
+                        <select id="learningWeeks">
+
+                            <option value="2">
+                                2 weeks
+                            </option>
+
+                            <option
+                                value="4"
+                                selected
+                            >
+                                4 weeks
+                            </option>
+
+                            <option value="8">
+                                8 weeks
+                            </option>
+
+                            <option value="12">
+                                12 weeks
+                            </option>
+
+                            <option value="24">
+                                24 weeks
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    id="learningButton"
+                >
+                    <span>Create Learning Path</span>
+                    <span>→</span>
+                </button>
+
+            </section>
+
+
+            <!-- RESULT -->
+
+            <section
+                id="resultSection"
+                class="result-section hidden"
+            >
+
+                <div class="result-header">
+
+                    <div>
+
+                        <span class="result-label">
+                            EDU GENIE
+                        </span>
+
+                        <h2>AI Response</h2>
+
+                    </div>
+
+                    <button
+                        id="copyButton"
+                        class="copy-button"
+                    >
+                        📋 Copy
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="loading"
+                    class="loading hidden"
+                >
+                    <div class="spinner"></div>
+
+                    <span>
+                        EduGenie is thinking...
+                    </span>
+                </div>
+
+
+                <div
+                    id="errorMessage"
+                    class="error-message hidden"
+                ></div>
+
+
+                <pre
+                    id="result"
+                    class="result-content"
+                ></pre>
+
+            </section>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                EduGenie • Powered by Google Gemini
+            </p>
+
+            <p>
+                Learn • Practice • Grow
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
