@@ -1,0 +1,3 @@
+"""
+EduGenie AI services.
+"""
